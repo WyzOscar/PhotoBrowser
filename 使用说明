@@ -1,0 +1,17 @@
+使用方法：
+        只需要在你的ViewController里面写入下面代码就可以了
+        
+          WyzAlbumViewController *wyzAlbumVC = [[WyzAlbumViewController alloc]init];
+    
+    wyzAlbumVC.currentIndex =index-8;//这个参数表示当前图片的index，默认是0
+    
+    wyzAlbumVC.imgArr = self.urlArrays;//图片数组，可以是url，也可以是UIImage
+    wyzAlbumVC.imageNameArray=self.imageNames;//图片名字数组
+    //进入动画
+//    [self.navigationController pushViewController:wyzAlbumVC animated:NO];
+//    [self.navigationController.view.layer transitionWithAnimType:TransitionAnimTypeRamdom subType:TransitionSubtypesFromRamdom curve:TransitionCurveRamdom duration:1.0f];
+    [self presentViewController:wyzAlbumVC animated:YES completion:^{
+    
+    
+
+    }];
