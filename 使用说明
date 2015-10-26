@@ -1,4 +1,5 @@
 使用方法：
+        把文件夹直接拖入项目中。
         只需要在你的ViewController里面写入下面代码就可以了
         
           WyzAlbumViewController *wyzAlbumVC = [[WyzAlbumViewController alloc]init];
