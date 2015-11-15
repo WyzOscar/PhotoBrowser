@@ -23,7 +23,7 @@
     self.imageArrays=[[NSMutableArray alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
     //第一种方式
-    [self.urlArrays addObject:@"http://img2.3lian.com/img2007/19/33/005.jpg"];
+    [self.urlArrays addObject:@"http://images.hongfanginv.com/2015/11/1447318757.jpg"];
     [self.urlArrays addObject:@"http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg"];
     [self.urlArrays addObject:@"http://www.xxjxsj.cn/article/UploadPic/2009-10/200910321242159016.jpg"];
     
