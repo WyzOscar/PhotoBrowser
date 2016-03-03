@@ -65,8 +65,8 @@
     self.scrollView.delegate = self;
     self.scrollView.contentOffset = CGPointMake(0, 0);
     //设置放大缩小的最大，最小倍数
-//    self.scrollView.minimumZoomScale = 1;
-//    self.scrollView.maximumZoomScale = 2;
+    self.scrollView.minimumZoomScale = 1;
+    self.scrollView.maximumZoomScale = 2;
     [self.view addSubview:self.scrollView];
     
     for (int i = 0; i < self.imgArr.count; i++) {
@@ -153,11 +153,16 @@
 
 #pragma mark - UIScrollViewDelegate
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    NSLog(@"scrollViewDidEndDecelerating");
+
     int i = scrollView.contentOffset.x/screen_width+1;
-    [self loadPhote:i-1];
-    self.sliderLabel.text = [NSString stringWithFormat:@"%d/%lu",i,(unsigned long)self.imgArr.count];
-    self.nameLabel.text=self.imageNameArray[i-1];
+    //判断是否为第一张
+    if(i>=1){
+        
+        [self loadPhote:i-1];
+        self.sliderLabel.text = [NSString stringWithFormat:@"%d/%lu",i,(unsigned long)self.imgArr.count];
+        self.nameLabel.text=self.imageNameArray[i-1];
+        
+    }
 }
 
 
